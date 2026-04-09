@@ -31,6 +31,9 @@ export default async function handler(request) {
   const q = (url.searchParams.get('q') || url.searchParams.get('query') || '').trim();
   const limit = Math.min(20, Math.max(1, parseInt(url.searchParams.get('limit') || '8', 10) || 8));
 
+  // Observability: Log search queries
+  console.log('search_query', { q, limit });
+
   if (!q) {
     return json(
       {

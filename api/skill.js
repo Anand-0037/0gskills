@@ -39,6 +39,18 @@ export default async function handler(request) {
   const format = (url.searchParams.get('format') || 'json').toLowerCase();
   const depth = Math.min(4, Math.max(0, parseInt(url.searchParams.get('depth') || '0', 10) || 0));
 
+  // 1. Observability: Basic logging
+  console.log('skill_request', { topic: topicRaw, depth, format });
+
+  // 2. Improvement: Discovery endpoint (?topics=list or ?topic=list)
+  const isListRequest = url.searchParams.get('topics') === 'list' || topicRaw === 'list';
+  if (isListRequest) {
+    return json({
+      topics: [...ALLOWED_TOPICS].sort(),
+      count: ALLOWED_TOPICS.size,
+    });
+  }
+
   if (!ALLOWED_TOPICS.has(topicRaw)) {
     return json(
       {
@@ -101,6 +113,8 @@ export default async function handler(request) {
   const summary = pickSummary(body, fm, introText);
   const links = extractMdLinks(mdText);
 
+  const compact = url.searchParams.get('compact') === 'true';
+
   /** @type {Record<string, unknown>} */
   const payload = {
     topic: topicRaw,
@@ -108,10 +122,13 @@ export default async function handler(request) {
     summary,
     markdownUrl: mdUrl,
     apiUrl: `${origin}/api/skill?topic=${encodeURIComponent(topicRaw)}&format=json`,
-    sections,
-    links,
-    depth,
   };
+
+  if (!compact) {
+    payload.sections = sections;
+    payload.links = links;
+    payload.depth = depth;
+  }
 
   if (depth >= 2) {
     const relatedTopics = [];

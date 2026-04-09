@@ -258,12 +258,21 @@ export function scoreSearchItem(q, item) {
   if (!terms.length) return 0;
 
   const hay = `${item.topic} ${item.title} ${item.description}`.toLowerCase();
+  const lowerTopic = item.topic.toLowerCase();
+  const lowerTitle = item.title.toLowerCase();
+  const lowerQ = q.toLowerCase();
+
   let score = 0;
+
+  // Exact match boosts
+  if (lowerTopic === lowerQ) score += 10;
+  if (lowerTitle === lowerQ) score += 5;
+
   for (const t of terms) {
-    if (item.topic.includes(t)) score += 3;
-    if (item.title.toLowerCase().includes(t)) score += 2;
+    if (lowerTopic.includes(t)) score += 3;
+    if (lowerTitle.includes(t)) score += 2;
     if (hay.includes(t)) score += 1;
   }
-  const max = terms.length * 6;
+  const max = (terms.length * 6) + 10;
   return Math.round((score / max) * 1000) / 1000;
 }
