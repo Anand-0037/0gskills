@@ -50,6 +50,7 @@ curl -sSL https://0gskills.com/ship/SKILL.md
 ### Official 0G Links
 - [0G Documentation](https://docs.0g.ai/)
 - [0G Discord (dev support)](https://discord.gg/0glabs)
+- [0G Labs on X](https://x.com/0G_labs)
 - [Chainscan (mainnet)](https://chainscan.0g.ai/)
 - [Chainscan (Galileo testnet)](https://chainscan-galileo.0g.ai/)
 - [Testnet faucet](https://faucet.0g.ai/)

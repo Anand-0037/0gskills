@@ -10,6 +10,7 @@ Robots: https://0gskills.com/robots.txt
 - Website: https://0gskills.com
 - License: MIT
 - Official 0G docs: https://docs.0g.ai/
+- Official 0G on X: https://x.com/0G_labs
 
 ## Entry points
 

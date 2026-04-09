@@ -34,6 +34,7 @@ After deploy: `https://<your-domain>/SKILL.md`, `https://<your-domain>/ship/SKIL
 ## Community
 
 - [0G Discord](https://discord.gg/0glabs) — developer support and network updates  
+- [0G Labs on X](https://x.com/0G_labs) — announcements and ecosystem updates  
 - [0G documentation](https://docs.0g.ai/) — canonical chain, RPC, and contract details  
 
 ## Contributing
