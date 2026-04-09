@@ -1,15 +1,10 @@
-0GSKILLS — ZeroG Knowledge for AI Agents
+# 0GSKILLS
 
-**Read the name:** **0** (digit zero) · **G** · **S** · **K** · **I** · **L** · **L** · **S** — then the block letters below spell the same.
+![0GSKILLS wordmark — 0 (zero), G, S, K, I, L, L, S](banner-0gskills.svg)
 
-```
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
-```
+**0** (zero) · **G** · **S** · **K** · **I** · **L** · **L** · **S**
+
+Plain-text wordmark URL (agents / no renderer): `https://0gskills.com/banner-0gskills.svg`
 
 The missing knowledge between AI agents and production apps on **0G Chain** — EVM execution, decentralized storage, and AI compute.
 

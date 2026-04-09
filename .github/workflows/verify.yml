@@ -1,0 +1,24 @@
+name: Verify layout
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  files:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required files
+        run: |
+          set -e
+          for f in LICENSE README.md SKILL.md index.html vercel.json llms.txt favicon.svg og-image.png banner-0gskills.svg; do
+            test -f "$f" || { echo "missing $f"; exit 1; }
+          done
+          topics="ship why-zerog protocol gas wallets l2s standards tools money-legos orchestration contract-addresses concepts security testing indexing frontend-ux frontend-playbook qa audit"
+          for d in $topics; do
+            test -f "$d/SKILL.md" || { echo "missing $d/SKILL.md"; exit 1; }
+          done
+          echo "All required paths present."
