@@ -21,7 +21,7 @@ Then open `http://localhost:8080/SKILL.md` or any skill path.
 
 ## Deploy (Vercel)
 
-This repo is a **static** site: markdown skills, `index.html`, and assets. No build step is required.
+This repo is mostly **static** (markdown skills, `index.html`, assets) plus **Vercel Edge** routes in `api/`. No npm build step is required for deploy.
 
 1. Push the repository to GitHub (or GitLab / Bitbucket).
 2. In [Vercel](https://vercel.com), **Import** the project — framework **Other**, root **`/`**, output **`.`** (default static).
@@ -30,6 +30,46 @@ This repo is a **static** site: markdown skills, `index.html`, and assets. No bu
 5. Optional: turn on **Vercel Web Analytics** in the project so `/_vercel/insights/script.js` (already referenced in `index.html`) collects traffic. Or swap in [Plausible](https://plausible.io/) / other analytics if you prefer.
 
 After deploy: `https://<your-domain>/SKILL.md`, `https://<your-domain>/ship/SKILL.md`, plus `robots.txt` and `sitemap.xml` at the site root.
+
+Vercel also deploys **Edge Functions** under `api/` (no separate backend). Same repo, same domain.
+
+## Agent API (JSON + search)
+
+Structured responses for IDEs and agents (CORS `*`, CDN-friendly caching on success):
+
+```bash
+# Structured skill (parsed sections + internal .md links)
+curl -sS "https://0gskills.com/api/skill?topic=ship"
+
+# Raw markdown passthrough (same files as static hosting)
+curl -sS "https://0gskills.com/api/skill?topic=ship&format=markdown"
+
+# Root index as JSON (topic=index)
+curl -sS "https://0gskills.com/api/skill?topic=index"
+
+# Follow cross-links: include summaries of linked skills (max 8)
+curl -sS "https://0gskills.com/api/skill?topic=ship&depth=2"
+
+# Keyword search over topic titles/descriptions (lightweight, no vector DB)
+curl -sS "https://0gskills.com/api/search?q=deploy%20contract"
+```
+
+Example in JavaScript:
+
+```js
+const r = await fetch("https://0gskills.com/api/skill?topic=ship");
+const skill = await r.json();
+// skill.title, skill.summary, skill.sections[], skill.links[]
+```
+
+Local preview of APIs: install [Vercel CLI](https://vercel.com/docs/cli) and run `vercel dev` from the repo root (plain `python -m http.server` will **not** run `/api/*`).
+
+### Cursor prompt (copy-paste to extend this layer)
+
+Use when you want the assistant to evolve the agent API without breaking static markdown:
+
+> **Task:** Improve the 0GSKILLS agent API in this repo (`api/skill.js`, `api/search.js`, `api/_skillCore.js`). Constraints: stay on **Vercel Edge** (no new servers, no auth, no database). Keep all existing `*/SKILL.md` URLs and content working unchanged.  
+> **Goals:** (1) Extend `/api/skill` only if needed — e.g. optional `format`, `depth`, or richer JSON fields — document new query params in README and `llms.txt`. (2) Improve `/api/search` relevance (still keyword-based) or add optional `limit` — avoid heavy dependencies. (3) Add `Access-Control-Allow-Origin: *` on all API responses and handle `OPTIONS`. (4) Do not cache HTTP error responses aggressively. (5) After changes, run `node --check` on touched files and update `.github/workflows/verify.yml` if you add required paths.
 
 ## Community
 

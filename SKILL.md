@@ -24,6 +24,18 @@ curl -sSL https://0gskills.com/SKILL.md
 curl -sSL https://0gskills.com/ship/SKILL.md
 ```
 
+### Agent API (structured JSON on the same host)
+Vercel Edge routes — no auth, CORS `*`. Same markdown as above, parsed for tools.
+
+```bash
+curl -sS "https://0gskills.com/api/skill?topic=ship"
+curl -sS "https://0gskills.com/api/search?q=security"
+```
+
+- **`topic`:** skill id (`ship`, `gas`, …) or `index` for this file.
+- **`format`:** `json` (default) or `markdown` for raw body.
+- **`depth`:** `2` to include `related` summaries for linked `*/SKILL.md` paths (capped).
+
 ### Skills (fetch any URL)
 | Topic                  | Description                                      | URL                          |
 |------------------------|--------------------------------------------------|------------------------------|

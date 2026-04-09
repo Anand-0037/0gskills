@@ -17,6 +17,13 @@ Robots: https://0gskills.com/robots.txt
 - Index (all topics): https://0gskills.com/SKILL.md
 - Ship (start here): https://0gskills.com/ship/SKILL.md
 
+## Agent API (structured JSON, CORS *)
+
+- Skill as JSON: https://0gskills.com/api/skill?topic=ship (use topic=index for root index)
+- Raw markdown via API: https://0gskills.com/api/skill?topic=ship&format=markdown
+- Linked-topic summaries: add &depth=2 (fetches linked SKILL.md files, capped)
+- Search topics: https://0gskills.com/api/search?q=deploy+contract
+
 ## All skills (fetch as raw markdown)
 
 - https://0gskills.com/SKILL.md

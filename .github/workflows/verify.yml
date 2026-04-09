@@ -14,7 +14,7 @@ jobs:
       - name: Check required files
         run: |
           set -e
-          for f in LICENSE README.md SKILL.md index.html vercel.json llms.txt favicon.svg og-image.png banner-0gskills.svg robots.txt sitemap.xml; do
+          for f in LICENSE README.md SKILL.md index.html vercel.json package.json llms.txt favicon.svg og-image.png banner-0gskills.svg robots.txt sitemap.xml api/skill.js api/search.js api/_skillCore.js; do
             test -f "$f" || { echo "missing $f"; exit 1; }
           done
           topics="ship why-zerog protocol gas wallets l2s standards tools money-legos orchestration contract-addresses concepts security testing indexing frontend-ux frontend-playbook qa audit"
