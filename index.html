@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>0GSKILLS — ZeroG Knowledge for AI Agents</title>
+  <meta name="description" content="Modular SKILL.md guides for building on 0G Chain — EVM, storage, compute. Fetch with curl or fetch() for agents and developers." />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="0GSKILLS — ZeroG Knowledge for AI Agents" />
+  <meta property="og:description" content="Standalone markdown skills for 0G Chain development. Production-ready patterns for agents." />
+  <meta property="og:image" content="https://0gskills.com/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="0GSKILLS" />
+  <meta name="twitter:description" content="ZeroG knowledge base for AI agents — fetch SKILL.md over HTTPS." />
+  <meta name="twitter:image" content="https://0gskills.com/og-image.png" />
+  <style>
+    :root {
+      --bg: #0a0f14;
+      --panel: #111923;
+      --text: #e8eef5;
+      --muted: #8b9cb3;
+      --accent: #5eead4;
+      --border: #243044;
+      --link: #7dd3fc;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+    header { margin-bottom: 2rem; }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0 0 0.5rem;
+    }
+    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.25rem; }
+    pre.banner {
+      margin: 0 0 1.5rem;
+      padding: 1rem 1.25rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: auto;
+      font-size: 0.62rem;
+      line-height: 1.2;
+      color: var(--accent);
+    }
+    .cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.55rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: 1px solid var(--border);
+      background: var(--panel);
+      color: var(--text);
+    }
+    .btn.primary {
+      background: linear-gradient(135deg, #0d3d36, #134e4a);
+      border-color: #2a6f62;
+      color: #ecfeff;
+    }
+    .btn:hover { filter: brightness(1.08); text-decoration: none; }
+    h2 {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      margin: 2rem 0 0.75rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    .skills {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.65rem;
+    }
+    .skills li {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.15rem;
+      padding: 0.65rem 0.85rem;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    @media (min-width: 640px) {
+      .skills li { grid-template-columns: 200px 1fr; align-items: baseline; }
+    }
+    .skills strong { font-family: ui-monospace, monospace; font-weight: 600; color: var(--accent); }
+    .skills span.desc { color: var(--muted); font-size: 0.95rem; }
+    .skills a.path { font-family: ui-monospace, monospace; font-size: 0.8rem; color: var(--link); }
+    code.inline {
+      font-family: ui-monospace, monospace;
+      font-size: 0.85em;
+      background: #0d131c;
+      padding: 0.12rem 0.35rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    footer .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.25rem;
+      margin: 0 0 1rem;
+      padding: 0;
+      list-style: none;
+    }
+    footer .footer-links li { margin: 0; }
+    footer .footer-note { margin: 0; max-width: 52ch; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>0GSKILLS</h1>
+      <p class="tagline">The missing knowledge between AI agents and production apps on <strong>0G Chain</strong> — EVM execution, decentralized storage, and AI compute.</p>
+      <pre class="banner" aria-hidden="true">██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
+██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
+██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
+██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
+╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
+ ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝</pre>
+      <div class="cta">
+        <a class="btn primary" href="/SKILL.md">Full index (SKILL.md) →</a>
+        <a class="btn" href="/ship/SKILL.md">Start with Ship →</a>
+        <a class="btn" href="/llms.txt">llms.txt</a>
+      </div>
+      <p>Each topic is a standalone markdown file. Agents use <code class="inline">curl</code> or <code class="inline">fetch()</code> — no install.</p>
+    </header>
+
+    <h2>How to fetch</h2>
+    <pre style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1rem;overflow:auto;font-size:0.85rem;">curl -sSL https://0gskills.com/SKILL.md
+curl -sSL https://0gskills.com/ship/SKILL.md</pre>
+
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li><strong>Ship</strong><span class="desc">End-to-end build & deploy on 0G. <a class="path" href="/ship/SKILL.md">/ship/SKILL.md</a></span></li>
+      <li><strong>Why ZeroG</strong><span class="desc">Strengths & tradeoffs. <a class="path" href="/why-zerog/SKILL.md">/why-zerog/SKILL.md</a></span></li>
+      <li><strong>Protocol</strong><span class="desc">Upgrades, restaking, roadmap hygiene. <a class="path" href="/protocol/SKILL.md">/protocol/SKILL.md</a></span></li>
+      <li><strong>Gas &amp; Costs</strong><span class="desc">Fee models vs L1/L2. <a class="path" href="/gas/SKILL.md">/gas/SKILL.md</a></span></li>
+      <li><strong>Wallets</strong><span class="desc">Keys, RPC, signing. <a class="path" href="/wallets/SKILL.md">/wallets/SKILL.md</a></span></li>
+      <li><strong>Layer 2s</strong><span class="desc">Bridges, DA, Ethereum relationship. <a class="path" href="/l2s/SKILL.md">/l2s/SKILL.md</a></span></li>
+      <li><strong>Standards</strong><span class="desc">Tokens, NFTs, identity on EVM. <a class="path" href="/standards/SKILL.md">/standards/SKILL.md</a></span></li>
+      <li><strong>Tools</strong><span class="desc">RPCs, SDKs, Foundry/Hardhat. <a class="path" href="/tools/SKILL.md">/tools/SKILL.md</a></span></li>
+      <li><strong>Money Legos</strong><span class="desc">DeFi composability. <a class="path" href="/money-legos/SKILL.md">/money-legos/SKILL.md</a></span></li>
+      <li><strong>Orchestration</strong><span class="desc">Agent workflows. <a class="path" href="/orchestration/SKILL.md">/orchestration/SKILL.md</a></span></li>
+      <li><strong>Contract Addresses</strong><span class="desc">System contracts &amp; precompiles. <a class="path" href="/contract-addresses/SKILL.md">/contract-addresses/SKILL.md</a></span></li>
+      <li><strong>Concepts</strong><span class="desc">Mental models. <a class="path" href="/concepts/SKILL.md">/concepts/SKILL.md</a></span></li>
+      <li><strong>Security</strong><span class="desc">Defensive Solidity. <a class="path" href="/security/SKILL.md">/security/SKILL.md</a></span></li>
+      <li><strong>Testing</strong><span class="desc">Unit, fuzz, fork tests. <a class="path" href="/testing/SKILL.md">/testing/SKILL.md</a></span></li>
+      <li><strong>Indexing</strong><span class="desc">Events, subgraphs, analytics. <a class="path" href="/indexing/SKILL.md">/indexing/SKILL.md</a></span></li>
+      <li><strong>Frontend UX</strong><span class="desc">Mandatory dApp UX rules. <a class="path" href="/frontend-ux/SKILL.md">/frontend-ux/SKILL.md</a></span></li>
+      <li><strong>Frontend Playbook</strong><span class="desc">Production pipeline. <a class="path" href="/frontend-playbook/SKILL.md">/frontend-playbook/SKILL.md</a></span></li>
+      <li><strong>QA</strong><span class="desc">Pre-release checklist. <a class="path" href="/qa/SKILL.md">/qa/SKILL.md</a></span></li>
+      <li><strong>Audit</strong><span class="desc">Structured audit prompts. <a class="path" href="/audit/SKILL.md">/audit/SKILL.md</a></span></li>
+    </ul>
+
+    <footer>
+      <ul class="footer-links" aria-label="0G ecosystem and resources">
+        <li><a href="https://docs.0g.ai/">0G documentation</a></li>
+        <li><a href="https://discord.gg/0glabs">0G Discord</a></li>
+        <li><a href="https://explorer.0g.ai/">0G explorer hub</a></li>
+        <li><a href="https://chainscan.0g.ai/">Chainscan (mainnet)</a></li>
+        <li><a href="https://chainscan-galileo.0g.ai/">Chainscan (Galileo testnet)</a></li>
+        <li><a href="https://faucet.0g.ai/">Testnet faucet</a></li>
+        <li><a href="/SKILL.md">Skill index (markdown)</a></li>
+        <li><a href="/llms.txt">llms.txt</a></li>
+        <li><a href="https://github.com/0gfoundation">0G Foundation (GitHub)</a></li>
+      </ul>
+      <p class="footer-note">MIT License · Open source — PRs welcome. Verify chain IDs, RPCs, and contract addresses against <a href="https://docs.0g.ai/">docs.0g.ai</a> before production.</p>
+    </footer>
+  </div>
+</body>
+</html>
