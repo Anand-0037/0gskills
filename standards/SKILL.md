@@ -1,12 +1,12 @@
-0GSKILLS — Standards
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: standards
+description: "Token, NFT, and identity patterns on 0G’s EVM layer."
+---
+
+# Standards
 
 **Standards** — Token, NFT, and identity patterns on 0G’s EVM layer.
+
 
 0G execution is **EVM-compatible** — treat standards as **Ethereum-equivalent** unless a 0G-specific precompile or system contract says otherwise ([precompiles](https://docs.0g.ai/developer-hub/building-on-0g/contracts-on-0g/precompiles/precompiles-overview)).
 

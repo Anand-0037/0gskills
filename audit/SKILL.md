@@ -1,12 +1,12 @@
-0GSKILLS — Audit
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: audit
+description: "Structured smart-contract review prompts for AI agents (0G / EVM)."
+---
+
+# Audit
 
 **Audit** — Structured smart-contract review prompts for AI agents (0G / EVM).
+
 
 Use for **external** or **high-value** codebases. This is **not** a substitute for professional auditors.
 

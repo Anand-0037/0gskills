@@ -1,12 +1,12 @@
-0GSKILLS — Layer 2s & Bridges
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: l2s
+description: "How 0G relates to Ethereum rollups, bridges, and data availability."
+---
+
+# Layer 2s
 
 **Layer 2s** — How 0G relates to Ethereum rollups, bridges, and data availability.
+
 
 ---
 

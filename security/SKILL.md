@@ -1,12 +1,12 @@
-0GSKILLS — Security
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: security
+description: "Vulnerabilities and defensive coding for Solidity on 0G."
+---
+
+# Security
 
 **Security** — Vulnerabilities and defensive coding for Solidity on 0G.
+
 
 0G uses standard **EVM semantics** — Ethereum-class vulnerabilities apply. Compiler target: **`cancun`** ([deploy doc](https://docs.0g.ai/developer-hub/building-on-0g/contracts-on-0g/deploy-contracts)).
 

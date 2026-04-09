@@ -1,12 +1,12 @@
-0GSKILLS — QA
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: qa
+description: "Checklist for reviewing a 0G dApp before release."
+---
+
+# QA
 
 **QA** — Checklist for reviewing a 0G dApp before release.
+
 
 Run this in a **separate reviewer session** from the builder agent ([Orchestration](../orchestration/SKILL.md)).
 

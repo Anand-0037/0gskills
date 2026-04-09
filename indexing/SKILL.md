@@ -1,12 +1,12 @@
-0GSKILLS — Indexing
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: indexing
+description: "Querying 0G chain data responsibly (events, subgraphs, analytics)."
+---
+
+# Indexing
 
 **Indexing** — Querying 0G chain data responsibly (events, subgraphs, analytics).
+
 
 ---
 

@@ -1,12 +1,12 @@
-0GSKILLS — Protocol (0G)
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: protocol
+description: "How 0G evolves, how it connects to Ethereum, and how to stay current."
+---
+
+# Protocol
 
 **Protocol** — How 0G evolves, how it connects to Ethereum, and how to stay current.
+
 
 Primary sources: [0G Docs](https://docs.0g.ai/), [Validator / restaking](https://docs.0g.ai/run-a-node/validator-node).
 

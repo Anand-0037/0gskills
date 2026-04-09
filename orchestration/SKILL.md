@@ -1,12 +1,12 @@
-0GSKILLS — Orchestration
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: orchestration
+description: "How AI agents should plan, execute, and verify multi-step 0G dApps."
+---
+
+# Orchestration
 
 **Orchestration** — How AI agents should plan, execute, and verify multi-step 0G dApps.
+
 
 ---
 

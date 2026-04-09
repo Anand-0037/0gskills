@@ -1,12 +1,12 @@
-0GSKILLS — Ship on 0G
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: ship
+description: "End-to-end path from idea to production on 0G Chain."
+---
+
+# Ship
 
 **Ship** — End-to-end path from idea to production on **0G Chain**.
+
 
 Official reference: [0G Documentation](https://docs.0g.ai/)
 

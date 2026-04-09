@@ -1,12 +1,12 @@
-0GSKILLS — Contract Addresses
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: contract-addresses
+description: "Known precompiles, contracts, and network endpoints — verify on Chainscan before production."
+---
+
+# Contract Addresses
 
 **⚠️ ALWAYS verify live on Chainscan.** Testnet addresses and precompiles can change.
+
 
 ## Networks
 | Network          | Chain ID | RPC (public)                  | Explorer                          |

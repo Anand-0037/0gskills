@@ -1,12 +1,12 @@
-0GSKILLS — Testing
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: testing
+description: "Unit, fuzz, fork, and integration testing for 0G contracts and apps."
+---
+
+# Testing
 
 **Testing** — Unit, fuzz, fork, and integration testing for 0G contracts and apps.
+
 
 ---
 

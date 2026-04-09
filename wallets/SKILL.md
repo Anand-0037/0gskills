@@ -1,12 +1,12 @@
-0GSKILLS — Wallets
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: wallets
+description: "Keys, accounts, and safe signing for 0G builders and agents."
+---
+
+# Wallets
 
 **Wallets** — Keys, accounts, and safe signing for 0G builders and agents.
+
 
 0G’s execution layer is **EVM-compatible** — standard Ethereum wallets work when configured with the correct **chain ID** and **RPC**.
 

@@ -1,12 +1,12 @@
-0GSKILLS — Why ZeroG
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: why-zerog
+description: "When 0G Chain is the right foundation, and honest tradeoffs."
+---
+
+# Why ZeroG
 
 **Why ZeroG** — When 0G Chain is the right foundation, and honest tradeoffs.
+
 
 Sources: [0G Documentation](https://docs.0g.ai/), [Deploy on 0G](https://docs.0g.ai/developer-hub/building-on-0g/contracts-on-0g/deploy-contracts).
 

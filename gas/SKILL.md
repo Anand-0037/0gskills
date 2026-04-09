@@ -1,12 +1,12 @@
-0GSKILLS — Gas & Costs
-██████╗  ██████╗ ███████╗██╗  ██╗██╗██╗  ██╗ ███████╗
-██╔════╝ ██╔════╝ ██╔════╝██║  ╚═╝██║██║  ██║ ██╔════╝
-██║  ███╗██║  ███╗███████╗█████╗  ██║██║  ██║ ███████╗
-██║   ██║██║   ██║╚════██║██╔═██╗ ██║██║  ██║ ╚════██║
-╚██████╔╝╚██████╔╝███████║██║  ██╗██║███████╗███████║
- ╚═════╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+---
+name: gas
+description: "How to think about fees on 0G vs Ethereum and L2s."
+---
+
+# Gas & Costs
 
 **Gas & Costs** — How to think about fees on 0G vs Ethereum and L2s.
+
 
 Official notes: [Deploy on 0G](https://docs.0g.ai/developer-hub/building-on-0g/contracts-on-0g/deploy-contracts) (performance / fee positioning).
 
