@@ -3,26 +3,48 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://0gskills.com/" />
   <title>0GSKILLS — ZeroG Knowledge for AI Agents</title>
-  <meta name="description" content="Modular SKILL.md guides for building on 0G Chain — EVM, storage, compute. Fetch with curl or fetch() for agents and developers." />
+  <meta name="description" content="The missing layer between AI agents and 0G apps. Modular SKILL.md guides for 0G Chain — fetch with curl or fetch()." />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://0gskills.com/" />
   <meta property="og:title" content="0GSKILLS — ZeroG Knowledge for AI Agents" />
-  <meta property="og:description" content="Standalone markdown skills for 0G Chain development. Production-ready patterns for agents." />
+  <meta property="og:description" content="The missing layer between AI agents and 0G apps. Agent-first markdown skills for 0G Chain." />
   <meta property="og:image" content="https://0gskills.com/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="0GSKILLS" />
-  <meta name="twitter:description" content="ZeroG knowledge base for AI agents — fetch SKILL.md over HTTPS." />
+  <meta name="twitter:description" content="The missing layer between AI agents and 0G apps — fetch SKILL.md over HTTPS." />
   <meta name="twitter:image" content="https://0gskills.com/og-image.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "0GSKILLS",
+    "alternateName": "0G Skills",
+    "url": "https://0gskills.com/",
+    "description": "The missing layer between AI agents and 0G apps. Modular markdown skills for building on 0G Chain.",
+    "license": "https://opensource.org/licenses/MIT",
+    "publisher": {
+      "@type": "Organization",
+      "name": "0GSKILLS",
+      "url": "https://0gskills.com/"
+    }
+  }
+  </script>
   <style>
     :root {
-      --bg: #0a0f14;
-      --panel: #111923;
-      --text: #e8eef5;
-      --muted: #8b9cb3;
-      --accent: #5eead4;
-      --border: #243044;
-      --link: #7dd3fc;
+      --bg: #f5f7fb;
+      --bg-alt: #f8fafc;
+      --panel: #ffffff;
+      --text: #0f172a;
+      --muted: #64748b;
+      --accent: #14b8a6;
+      --accent-hover: #0d9488;
+      --border: #e2e8f0;
+      --link: #0d9488;
+      --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+      --shadow-hover: 0 4px 12px rgba(15, 23, 42, 0.08);
     }
     * { box-sizing: border-box; }
     body {
@@ -30,87 +52,150 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.7;
     }
     a { color: var(--link); text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .wrap { max-width: 920px; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
-    header { margin-bottom: 2rem; }
-    h1 {
-      font-size: 1.75rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      margin: 0 0 0.5rem;
-    }
-    .tagline { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.25rem; }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 2.75rem 1.5rem 4rem; }
+    header { margin-bottom: 2.25rem; }
     .wordmark {
       display: block;
       width: 100%;
       max-width: 720px;
       height: auto;
-      margin: 0 0 0.75rem;
+      margin: 0 0 1rem;
       border-radius: 12px;
       border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+    }
+    h1.page-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin: 0 0 0.35rem;
+      color: var(--text);
+      line-height: 1.2;
+    }
+    .tagline {
+      color: var(--muted);
+      font-size: 1.125rem;
+      margin: 0 0 0.5rem;
+      max-width: 42rem;
+    }
+    .subtagline {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin: 0 0 1.5rem;
+      max-width: 46rem;
+    }
+    .agent-cta {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.35rem;
+      margin-bottom: 1.75rem;
+      box-shadow: var(--shadow);
+    }
+    .agent-cta h2 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+      border: 0;
+      padding: 0;
+    }
+    .agent-cta p { margin: 0 0 0.75rem; font-size: 0.95rem; color: var(--text); }
+    .agent-cta pre {
+      margin: 0;
+      padding: 0.85rem 1rem;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
     }
     .cta {
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
     }
     .btn {
       display: inline-flex;
       align-items: center;
       gap: 0.35rem;
-      padding: 0.55rem 1rem;
+      padding: 0.6rem 1.1rem;
       border-radius: 8px;
       font-weight: 600;
       font-size: 0.9rem;
       border: 1px solid var(--border);
       background: var(--panel);
       color: var(--text);
+      box-shadow: var(--shadow);
+      transition: background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+    }
+    .btn:hover {
+      text-decoration: none;
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
     }
     .btn.primary {
-      background: linear-gradient(135deg, #0d3d36, #134e4a);
-      border-color: #2a6f62;
-      color: #ecfeff;
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #ffffff;
     }
-    .btn:hover { filter: brightness(1.08); text-decoration: none; }
-    h2 {
-      font-size: 1.1rem;
+    .btn.primary:hover {
+      background: var(--accent-hover);
+      border-color: var(--accent-hover);
+      color: #ffffff;
+    }
+    h2.section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       color: var(--muted);
-      margin: 2rem 0 0.75rem;
+      margin: 2.25rem 0 0.85rem;
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.35rem;
+      padding-bottom: 0.4rem;
+    }
+    .fetch-block {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1rem 1.15rem;
+      overflow: auto;
+      font-size: 0.85rem;
+      line-height: 1.55;
+      box-shadow: var(--shadow);
+      margin-bottom: 0.5rem;
     }
     .skills {
       list-style: none;
       margin: 0;
       padding: 0;
       display: grid;
-      gap: 0.65rem;
+      gap: 0.75rem;
     }
     .skills li {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 0.15rem;
-      padding: 0.65rem 0.85rem;
+      gap: 0.2rem;
+      padding: 0.85rem 1rem;
       background: var(--panel);
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+    }
+    .skills li:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+      transform: translateY(-1px);
     }
     @media (min-width: 640px) {
       .skills li { grid-template-columns: 200px 1fr; align-items: baseline; }
@@ -121,14 +206,15 @@
     code.inline {
       font-family: ui-monospace, monospace;
       font-size: 0.85em;
-      background: #0d131c;
-      padding: 0.12rem 0.35rem;
+      background: var(--bg-alt);
+      padding: 0.15rem 0.4rem;
       border-radius: 4px;
       border: 1px solid var(--border);
+      color: var(--text);
     }
     footer {
       margin-top: 3rem;
-      padding-top: 1.5rem;
+      padding-top: 1.75rem;
       border-top: 1px solid var(--border);
       color: var(--muted);
       font-size: 0.9rem;
@@ -142,28 +228,47 @@
       list-style: none;
     }
     footer .footer-links li { margin: 0; }
-    footer .footer-note { margin: 0; max-width: 52ch; }
+    footer .footer-note { margin: 0 0 1rem; max-width: 52ch; }
+    .distro {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem 1rem;
+      align-items: center;
+      margin-top: 0.5rem;
+    }
+    .distro a {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <header>
-      <h1 class="sr-only">0GSKILLS — ZeroG Knowledge for AI Agents</h1>
-      <img class="wordmark" src="/banner-0gskills.svg" width="800" height="200" alt="0GSKILLS. Spelled: 0 (zero), G, S, K, I, L, L, S." />
-      <p class="tagline">The missing knowledge between AI agents and production apps on <strong>0G Chain</strong> — EVM execution, decentralized storage, and AI compute.</p>
+      <img class="wordmark" src="/banner-0gskills.svg" width="800" height="200" alt="" role="presentation" decoding="async" />
+      <h1 class="page-title">0GSKILLS</h1>
+      <p class="tagline">The missing layer between AI agents and 0G apps</p>
+      <p class="subtagline">Modular <code class="inline">SKILL.md</code> guides for <strong>0G Chain</strong> — EVM, storage, compute. Agents pull markdown over HTTPS; no install.</p>
+
+      <div class="agent-cta" id="use-with-agents">
+        <h2>Use with AI agents</h2>
+        <p>Copy this into Cursor, ChatGPT, Claude, or any coding agent before you build on 0G:</p>
+        <pre tabindex="0">Read https://0gskills.com/ship/SKILL.md before coding on 0G.</pre>
+      </div>
+
       <div class="cta">
         <a class="btn primary" href="/SKILL.md">Full index (SKILL.md) →</a>
         <a class="btn" href="/ship/SKILL.md">Start with Ship →</a>
         <a class="btn" href="/llms.txt">llms.txt</a>
       </div>
-      <p>Each topic is a standalone markdown file. Agents use <code class="inline">curl</code> or <code class="inline">fetch()</code> — no install.</p>
+      <p>Each topic is a standalone markdown file. Use <code class="inline">curl</code> or <code class="inline">fetch()</code>.</p>
     </header>
 
-    <h2>How to fetch</h2>
-    <pre style="background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:1rem;overflow:auto;font-size:0.85rem;">curl -sSL https://0gskills.com/SKILL.md
+    <h2 class="section-title">How to fetch</h2>
+    <pre class="fetch-block">curl -sSL https://0gskills.com/SKILL.md
 curl -sSL https://0gskills.com/ship/SKILL.md</pre>
 
-    <h2>Skills</h2>
+    <h2 class="section-title">Skills</h2>
     <ul class="skills">
       <li><strong>Ship</strong><span class="desc">End-to-end build & deploy on 0G. <a class="path" href="/ship/SKILL.md">/ship/SKILL.md</a></span></li>
       <li><strong>Why ZeroG</strong><span class="desc">Strengths & tradeoffs. <a class="path" href="/why-zerog/SKILL.md">/why-zerog/SKILL.md</a></span></li>
@@ -198,8 +303,20 @@ curl -sSL https://0gskills.com/ship/SKILL.md</pre>
         <li><a href="/llms.txt">llms.txt</a></li>
         <li><a href="https://github.com/0gfoundation">0G Foundation (GitHub)</a></li>
       </ul>
+      <div class="distro" aria-label="Share and contribute">
+        <a href="https://twitter.com/intent/tweet?text=Read%20https%3A%2F%2F0gskills.com%2Fship%2FSKILL.md%20before%20coding%20on%200G" rel="noopener noreferrer" target="_blank">Share agent prompt on X</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/0gfoundation" rel="noopener noreferrer" target="_blank">Star &amp; explore 0G on GitHub</a>
+        <span aria-hidden="true">·</span>
+        <a href="/SKILL.md">Contribute via PR (edit SKILL.md)</a>
+      </div>
       <p class="footer-note">MIT License · Open source — PRs welcome. Verify chain IDs, RPCs, and contract addresses against <a href="https://docs.0g.ai/">docs.0g.ai</a> before production.</p>
+      <p class="footer-note"><a href="/robots.txt">robots.txt</a> · <a href="/sitemap.xml">sitemap.xml</a></p>
     </footer>
   </div>
+  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>

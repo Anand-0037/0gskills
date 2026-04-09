@@ -1,0 +1,44 @@
+# 0Gskills
+
+> The missing layer between AI agents and 0G apps — modular markdown skills for 0G Chain (EVM + storage + compute).
+
+Sitemap: https://0gskills.com/sitemap.xml
+Robots: https://0gskills.com/robots.txt
+
+## Project
+
+- Website: https://0gskills.com
+- License: MIT
+- Official 0G docs: https://docs.0g.ai/
+
+## Entry points
+
+- Index (all topics): https://0gskills.com/SKILL.md
+- Ship (start here): https://0gskills.com/ship/SKILL.md
+
+## All skills (fetch as raw markdown)
+
+- https://0gskills.com/SKILL.md
+- https://0gskills.com/ship/SKILL.md
+- https://0gskills.com/why-zerog/SKILL.md
+- https://0gskills.com/protocol/SKILL.md
+- https://0gskills.com/gas/SKILL.md
+- https://0gskills.com/wallets/SKILL.md
+- https://0gskills.com/l2s/SKILL.md
+- https://0gskills.com/standards/SKILL.md
+- https://0gskills.com/tools/SKILL.md
+- https://0gskills.com/money-legos/SKILL.md
+- https://0gskills.com/orchestration/SKILL.md
+- https://0gskills.com/contract-addresses/SKILL.md
+- https://0gskills.com/concepts/SKILL.md
+- https://0gskills.com/security/SKILL.md
+- https://0gskills.com/testing/SKILL.md
+- https://0gskills.com/indexing/SKILL.md
+- https://0gskills.com/frontend-ux/SKILL.md
+- https://0gskills.com/frontend-playbook/SKILL.md
+- https://0gskills.com/qa/SKILL.md
+- https://0gskills.com/audit/SKILL.md
+
+## Usage
+
+Agents should `curl` or `fetch()` the URLs above and follow cross-links inside each file. Always re-verify chain IDs, RPCs, and contract addresses against https://docs.0g.ai/ before production.

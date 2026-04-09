@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://0gskills.com/</loc><changefreq>weekly</changefreq><priority>1</priority></url>
+  <url><loc>https://0gskills.com/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.95</priority></url>
+  <url><loc>https://0gskills.com/llms.txt</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://0gskills.com/ship/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://0gskills.com/why-zerog/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/protocol/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/gas/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/wallets/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/l2s/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/standards/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/tools/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/money-legos/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/orchestration/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/contract-addresses/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/concepts/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/security/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/testing/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/indexing/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/frontend-ux/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/frontend-playbook/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/qa/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://0gskills.com/audit/SKILL.md</loc><changefreq>weekly</changefreq><priority>0.85</priority></url>
+</urlset>

@@ -6,9 +6,17 @@
 
 Plain-text wordmark URL (agents / no renderer): `https://0gskills.com/banner-0gskills.svg`
 
-The missing knowledge between AI agents and production apps on **0G Chain** — EVM execution, decentralized storage, and AI compute.
+**The missing layer between AI agents and 0G apps** — modular guides for **0G Chain** (EVM execution, decentralized storage, AI compute).
 
 **Canonical index:** when this repo is hosted at `https://0gskills.com`, each skill lives at `https://0gskills.com/<topic>/SKILL.md`.
+
+**SEO:** [`/robots.txt`](https://0gskills.com/robots.txt) · [`/sitemap.xml`](https://0gskills.com/sitemap.xml)
+
+### Use with AI agents
+
+```text
+Read https://0gskills.com/ship/SKILL.md before coding on 0G.
+```
 
 ### How to fetch (agents & humans)
 ```bash
