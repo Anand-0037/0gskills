@@ -1,106 +1,82 @@
 ---
 name: audit
-description: "Structured smart-contract review prompts for AI agents (0G / EVM)."
+description: "Master audit hub for 0G Chain applications (EVM, storage, compute)."
 ---
 
 # Audit
 
-**Audit** — Structured smart-contract review prompts for AI agents (0G / EVM).
+**Audit** — The central directory for auditing 0G Chain applications.
 
-
-Use for **external** or **high-value** codebases. This is **not** a substitute for professional auditors.
-
----
-
-## How to run an agent audit
-
-1. Freeze **commit hash** and **compiler settings** (`cancun`, optimizer runs).
-2. Collect **deployment addresses** + **Chainscan verification** status.
-3. Spawn **parallel** sub-agents per domain below.
-4. Merge findings; **dedupe** by root cause.
-5. File issues with **severity**, **exploit sketch**, **fix recommendation**, **test idea**.
+Use this hub to drill down into topic-specific audit tracks. Each track contains detailed checklists, 0G-specific gotchas, and prompt templates for specialized reviews.
 
 ---
 
-## Domain checklist
+## 🛠️ Audit Strategy
 
-### A. Access control & upgrades
+To perform a comprehensive review of a 0G integration:
 
-- Missing modifiers; role admin rotation; initializer replay; storage slot collisions in proxies.
-
-### B. Assets & accounting
-
-- Rounding; donation attacks; inflation; fee-on-transfer tokens; rebasing.
-
-### C. External calls & reentrancy
-
-- CEI violations; read-only reentrancy; cross-function reentrancy.
-
-### D. Oracles & price
-
-- Spot manipulation; TWAP windows; sequencer uptime assumptions (if any).
-
-### E. Cryptography & signatures
-
-- EIP-712 domain correctness; replay across chains/contracts; malleability.
-
-### F. Precompiles & system contracts
-
-- Input validation; failure handling; gas griefing on 0G precompile paths ([deploy doc](https://docs.0g.ai/developer-hub/building-on-0g/contracts-on-0g/deploy-contracts)).
-
-### G. Bridging & cross-chain (if present)
-
-- Message ordering; replay; handler permissions.
-
-### H. Denial of service
-
-- Unbounded loops; griefable sorting; block stuffing assumptions.
-
-### I. Events & indexing
-
-- Missing critical events; incorrect indexing for offchain monitors.
-
-### J. Testing gaps
-
-- Absent fuzz/invariant tests for core invariants.
+1. **Scoping**: Identify which 0G services are in use (EVM, Storage, or Compute).
+2. **Specialized Review**: Run parallel sub-agent audits for each technical domain.
+3. **Consolidation**: Merge findings, deduplicate root causes, and prioritize by protocol risk.
+4. **Verification**: Re-verify findings against [official 0G documentation](https://docs.0g.ai/).
 
 ---
 
-## Severity rubric (suggested)
+## 🧭 Audit Tracks
 
-- **Critical** — Direct fund loss, protocol brick, universal theft.
-- **High** — Material loss under plausible conditions.
-- **Medium** — Loss for subset / grief / DoS with economic cost.
-- **Low** — UX / inefficiency / edge-case reverting.
+Select a track below for a specialized auditing guide:
+
+### A. Wallets & Infrastructure
+Security checklist for private key handling, signing patterns, and agent isolation.
+👉 [**Audit: Wallets**](../audit-wallets/SKILL.md)
+
+### B. Storage & Data Availability
+Checklist for blob integrity, retrieval proof verification, and SDK implementation safety.
+👉 [**Audit: Storage**](../audit-storage/SKILL.md)
+
+### C. Onchain Indexing
+Ensuring offchain states match onchain events with high reliability and reorg-safety.
+👉 [**Audit: Indexing**](../audit-indexing/SKILL.md)
+
+### D. Multi-Step Orchestration
+Validating mission-critical agent workflows and multi-transaction state transitions.
+👉 [**Audit: Orchestration**](../audit-orchestration/SKILL.md)
+
+### E. Frontend & UX Controls
+Auditing the bridge between users/agents and the chain (chain switching, error surfacing).
+👉 [**Audit: Frontend**](../audit-frontend/SKILL.md)
 
 ---
 
-## Output template (per finding)
+## 🧱 Severity Rubric
 
-```
-Title: ...
-Severity: ...
-Contracts: ...
-Description: ...
-Attack sketch: ...
-Recommended fix: ...
-Regression test: ...
+- **Critical** — Direct fund loss, protocol brick, or universal state theft.
+- **High** — Material loss or protocol compromise under plausible conditions.
+- **Medium** — Griefing, Denial of Service (DoS), or sub-protocol economic loss.
+- **Low** — UX frictions, gas inefficiencies, or edge-case revert paths.
+
+---
+
+## 📝 Finding Template
+
+Use this format for reporting all security findings to ensure consistency:
+
+```markdown
+Title: [Concise description of the finding]
+Severity: [Critical | High | Medium | Low]
+Domain: [Wallets | Storage | Indexing | Orchestration | Frontend]
+Description: [What is the vulnerability?]
+Attack Vector: [Step-by-step exploit sketch]
+Recommendation: [Proposed fix or mitigation]
+Test Case: [Idea for a regression test or POC]
 ```
 
 ---
 
-## How to fetch this skill
+## Related Core Skills
 
-```bash
-curl -sSL https://0gskills.com/audit/SKILL.md
-```
-
----
-
-## Related skills
-
-- [Security](../security/SKILL.md)
-- [Testing](../testing/SKILL.md)
-- [QA](../qa/SKILL.md)
+- [Security](../security/SKILL.md) — Base EVM vulnerabilities.
+- [Testing](../testing/SKILL.md) — Fuzzing and invariant testing guides.
+- [QA](../qa/SKILL.md) — General pre-release checklists.
 
 MIT License — contributions welcome.

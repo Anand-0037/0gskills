@@ -24,6 +24,11 @@ export const ALLOWED_TOPICS = new Set([
   'frontend-playbook',
   'qa',
   'audit',
+  'audit-wallets',
+  'audit-storage',
+  'audit-indexing',
+  'audit-orchestration',
+  'audit-frontend',
 ]);
 
 /** Lightweight search corpus (topic metadata); keep in sync with topic SKILL.md frontmatter. */
@@ -129,6 +134,31 @@ export const SKILL_SEARCH_INDEX = [
     topic: 'audit',
     title: 'Audit',
     description: 'Structured smart-contract review prompts for AI agents (0G / EVM).',
+  },
+  {
+    topic: 'audit-wallets',
+    title: 'Audit: Wallets',
+    description: 'Security checklist for keys, signing, and agent isolation on 0G.',
+  },
+  {
+    topic: 'audit-storage',
+    title: 'Audit: Storage',
+    description: 'Verifying data availability, blob integrity, and storage SDK safety.',
+  },
+  {
+    topic: 'audit-indexing',
+    title: 'Audit: Indexing',
+    description: 'Ensuring consistency across event logs, subgraphs, and offchain state.',
+  },
+  {
+    topic: 'audit-orchestration',
+    title: 'Audit: Orchestration',
+    description: 'Validating multi-step agent transaction workflows and failure recovery.',
+  },
+  {
+    topic: 'audit-frontend',
+    title: 'Audit: Frontend',
+    description: 'UX-level verification for 0G-specific errors and chain switching.',
   },
 ];
 
